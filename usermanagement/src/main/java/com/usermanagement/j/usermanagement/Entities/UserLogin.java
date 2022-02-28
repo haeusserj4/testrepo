@@ -18,18 +18,25 @@ public class UserLogin {
 
     private String password;
 
+    private int active;
+
     
-    public UserLogin(long userId, int companyId, String userName, String password) {
+    public UserLogin() {
+    }
+
+    public UserLogin(long userId, int companyId, String userName, String password, int active) {
         this.userId = userId;
         this.companyId = companyId;
         this.userName = userName;
         this.password = password;
+        this.active =active;
     }
 
-    public UserLogin(int companyId, String userName, String password) {
+    public UserLogin(int companyId, String userName, String password, int active) {
         this.companyId = companyId;
         this.userName = userName;
         this.password = password;
+        this.active =active;
     }
 
     public long getUserId() {
@@ -64,6 +71,12 @@ public class UserLogin {
         this.password = password;
     }
 
-    
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
 
 }
